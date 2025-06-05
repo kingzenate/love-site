@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome My Love</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loginPage" class="page">
+    <h2>Welcome My Love ❤️</h2>
+    <input type="text" id="yourName" placeholder="Your Name">
+    <input type="text" id="myName" placeholder="My Name">
+    <button onclick="checkLove()">Login</button>
+  </div>  <div id="mainPage" class="page" style="display: none;">
+    <div class="stickers">
+      🎂 🎉 🎈 💖 🎊 🍰 🎁
+    </div>
+    <div class="note">
+      <h1>Happy 18th Birthday, Ammy! 🎂</h1>
+      <p>Today you turn 18, and I couldn’t be more proud of the amazing woman you’re becoming. 💕</p>
+      <p>This four years with you have been my best years. I’m happy I have you in my life. 🥰</p>
+      <p>May this birthday bring you joy, beauty, and endless love. You mean the world to me. ❤️</p>
+    </div>
+    <div class="flowers">
+      <img src="https://i.imgur.com/UdC8z6J.png" class="flower">
+      <img src="https://i.imgur.com/UdC8z6J.png" class="flower">
+      <img src="https://i.imgur.com/UdC8z6J.png" class="flower">
+    </div>
+    <audio autoplay loop>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+  </div>  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://i.imgur.com/1yvwx4z.jpg') no-repeat center center fixed;
+      background-size: cover;
+      text-align: center;
+      color: white;
+    }
+
+    .page {
+      padding-top: 100px;
+    }
+
+    input {
+      display: block;
+      margin: 15px auto;
+      padding: 12px;
+      width: 80%;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 12px 25px;
+      background-color: #ff3366;
+      border: none;
+      color: white;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .note {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 12px;
+      width: 90%;
+      margin: auto;
+      color: #fff9f9;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .flowers {
+      margin-top: 20px;
+    }
+
+    .flower {
+      width: 60px;
+      margin: 0 10px;
+      animation: float 3s infinite ease-in-out;
+    }
+
+    .stickers {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+  </style>  <script>
+    function checkLove() {
+      const yourName = document.getElementById('yourName').value.trim().toLowerCase();
+      const myName = document.getElementById('myName').value.trim().toLowerCase();
+      if (yourName === 'ammy' && myName === 'zenate') {
+        document.getElementById('loginPage').style.display = 'none';
+        document.getElementById('mainPage').style.display = 'block';
+      } else {
+        alert('Oops! Incorrect names. Try again, love 💌');
+      }
+    }
+  </script></body>
+</html>
